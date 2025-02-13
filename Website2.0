@@ -1,0 +1,546 @@
+# -*- coding: utf-8 -*-
+"""
+This script creates a multi-page website with modern visuals and landing pages.
+Run this in a Google Colab cell to generate the HTML files.
+"""
+
+# Landing Page (index.html)
+index_html = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social AI Business Solutions</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body { 
+      margin: 0; 
+      font-family: Arial, sans-serif; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+    .section {
+      padding: 60px 20px;
+      background: #fff;
+      color: #333;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+    .navbar {
+      background: transparent !important;
+    }
+    .nav-link {
+      color: #fff !important;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand text-white" href="#">Social AI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="color:#fff;"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#templates">Templates</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pitch-deck">Pitch Deck</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="hero">
+    <div>
+      <h1>Welcome to Social AI</h1>
+      <p>Empowering Your Business with Cutting-Edge AI & Social Media Solutions</p>
+      <a href="#templates" class="btn btn-primary btn-lg">Explore Our Templates</a>
+    </div>
+  </header>
+  <section id="templates" class="section">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Website Templates</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/400x250?text=Minimalist" class="card-img-top" alt="Modern Minimalist">
+            <div class="card-body">
+              <h5 class="card-title">Modern Minimalist</h5>
+              <p class="card-text">Clean and powerful design to showcase your business.</p>
+              <a href="template1.html" class="btn btn-primary">View Template</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/400x250?text=Dynamic" class="card-img-top" alt="Dynamic & Engaging">
+            <div class="card-body">
+              <h5 class="card-title">Dynamic & Engaging</h5>
+              <p class="card-text">Interactive and animated design that captivates your audience.</p>
+              <a href="template2.html" class="btn btn-primary">View Template</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/400x250?text=Futuristic" class="card-img-top" alt="AI-Driven Futuristic">
+            <div class="card-body">
+              <h5 class="card-title">AI-Driven Futuristic</h5>
+              <p class="card-text">Bold design with a futuristic edge, perfect for tech-forward businesses.</p>
+              <a href="template3.html" class="btn btn-primary">View Template</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="pitch-deck" class="section" style="background: #f8f9fa;">
+    <div class="container">
+      <h2 class="text-center mb-5">Pitch Deck</h2>
+      <div class="text-center">
+        <p>See our interactive pitch deck built with Reveal.js</p>
+        <a href="pitch_deck.html" class="btn btn-secondary btn-lg">View Pitch Deck</a>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="text-center mb-5">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="text-center p-4" style="background: #222; color: #fff;">
+    <p>&copy; 2025 Social AI Business Solutions. All rights reserved.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+'''
+
+# Template 1: Modern Minimalist
+template1 = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social AI - Modern Minimalist</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 56px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hero {
+      position: relative;
+      background: url('https://via.placeholder.com/1500x500?text=Empower+Your+Business') no-repeat center center;
+      background-size: cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section {
+      padding: 60px 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Social AI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering Your Business with AI</h1>
+      <p>Innovative solutions for a modern digital landscape.</p>
+      <a href="#services" class="btn btn-primary">Our Services</a>
+    </div>
+  </section>
+
+  <section id="about" class="container section">
+    <h2>About Us</h2>
+    <p>We bring enterprise-level AI and social media strategies to businesses of all sizes.</p>
+  </section>
+
+  <section id="services" class="container section">
+    <h2>Our Services</h2>
+    <p>Website Development, Social Media Management, AI-powered Solutions, and more.</p>
+  </section>
+
+  <section id="contact" class="container section mb-5">
+    <h2>Contact Us</h2>
+    <p>Contact us today to schedule a free consultation!</p>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+'''
+
+# Template 2: Dynamic & Engaging
+template2 = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social AI - Dynamic & Engaging</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      padding-top: 56px;
+    }
+    .hero {
+      position: relative;
+      background: url('https://via.placeholder.com/1500x500/333333/ffffff?text=Innovate+Engage+Grow') no-repeat center center;
+      background-size: cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      animation: fadeInUp 1s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section {
+      padding: 60px 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" data-aos="fade-down">
+    <a class="navbar-brand" href="#">Social AI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" data-aos="fade-down">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>Innovate. Engage. Grow.</h1>
+      <p>Transform your digital presence with our creative solutions.</p>
+      <a href="#services" class="btn btn-primary">Explore Services</a>
+    </div>
+  </section>
+
+  <section id="about" class="container section" data-aos="fade-right">
+    <h2>About Us</h2>
+    <p>At Social AI, we deliver dynamic and engaging digital experiences to level the playing field for small and medium businesses.</p>
+  </section>
+
+  <section id="services" class="container section" data-aos="fade-left">
+    <h2>Our Services</h2>
+    <p>From website development to social media campaigns and AI-powered tools, we boost your digital presence.</p>
+  </section>
+
+  <section id="contact" class="container section mb-5" data-aos="zoom-in">
+    <h2>Contact Us</h2>
+    <p>Ready to transform your digital strategy? Get in touch with us for a free consultation.</p>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>
+'''
+
+# Template 3: AI-Driven Futuristic (Dark Theme)
+template3 = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social AI - AI-Driven Futuristic</title>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #121212;
+      color: #e0e0e0;
+    }
+    header {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #00e676;
+    }
+    nav {
+      text-align: center;
+      padding: 10px;
+      background: #181818;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #00e676;
+      text-decoration: none;
+    }
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .section p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1f1f1f;
+    }
+    .btn {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Social AI</h1>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#ai-solutions">AI Solutions</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="home" class="section">
+    <h2>Welcome to the Future</h2>
+    <p>Experience cutting-edge AI-driven solutions and digital marketing strategies designed to propel your business forward.</p>
+    <a href="#ai-solutions" class="btn" style="background: #00e676; color: #121212; padding: 10px 20px; border: none;">Learn More</a>
+  </section>
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We deliver enterprise-level AI and social media strategies, empowering small and medium-sized businesses to compete with industry giants.</p>
+  </section>
+  <section id="ai-solutions" class="section">
+    <h2>Our AI Solutions</h2>
+    <p>From AI-powered chatbots to automation and advanced analytics, our solutions are tailored to streamline operations and enhance customer engagement.</p>
+  </section>
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Let's collaborate and drive innovation. Reach out today for a free consultation!</p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Social AI Business Solutions. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+'''
+
+# Pitch Deck: Using Reveal.js
+pitch_deck = '''<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Social AI Pitch Deck</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css" id="theme">
+  <style>
+    .reveal section {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Social AI Business Solutions</h1>
+        <p>Empowering Small &amp; Medium Businesses with AI &amp; Social Media Strategies</p>
+      </section>
+      <section>
+        <h2>The Problem</h2>
+        <ul>
+          <li>Small businesses struggle to compete with large corporations.</li>
+          <li>Limited access to advanced AI and digital marketing tools.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Our Solution</h2>
+        <ul>
+          <li>Enterprise-level website development and digital strategies.</li>
+          <li>Social media management, advertising, and influencer collaborations.</li>
+          <li>AI-powered chatbots, automation, and content generation.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Market Opportunity</h2>
+        <ul>
+          <li>Digital transformation is accelerating across industries.</li>
+          <li>Growing demand for AI-driven automation and marketing.</li>
+          <li>Untapped potential in the small and medium business segment.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Business Model</h2>
+        <ul>
+          <li>Consulting services with monthly retainers.</li>
+          <li>Project-based website and digital marketing solutions.</li>
+          <li>Subscription-based AI and automation tools.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Our Team</h2>
+        <p>Seasoned experts in AI, digital marketing, and technology innovation.</p>
+      </section>
+      <section>
+        <h2>Call to Action</h2>
+        <p>Let's level the playing field. Contact us today for a free consultation!</p>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize();
+  </script>
+</body>
+</html>
+'''
+
+# Write the HTML files to the current directory
+files = {
+    "index.html": index_html,
+    "template1.html": template1,
+    "template2.html": template2,
+    "template3.html": template3,
+    "pitch_deck.html": pitch_deck
+}
+
+for filename, content in files.items():
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"{filename} created successfully.")
+
+print("\nAll files have been created!")
+print("You can preview these files in Colab's file explorer or by using an IFrame. For example:")
+
+from IPython.display import IFrame, display
+display(IFrame(src="index.html", width="100%", height="600"))
